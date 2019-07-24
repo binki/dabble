@@ -23,7 +23,7 @@ function dabble_letters(words_of_len, letters, callback, num_callbacks) {
                                         if (lettercounts0) {
                                             callback([word6, word5, word4, word3, word2].join(' '));
                                             if (--num_callbacks <= 0) {
-                                                callback('~DONE~');
+                                                sayDone();
                                                 return;
                                             }
                                         }
@@ -35,6 +35,11 @@ function dabble_letters(words_of_len, letters, callback, num_callbacks) {
                 }
             }
         }
+    }
+    sayDone();
+
+    function sayDone() {
+        callback('~DONE~');
     }
 }
 
