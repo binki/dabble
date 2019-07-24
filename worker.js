@@ -4,7 +4,7 @@ function dabble_letters(words_of_len, letters, callback, num_callbacks) {
     // TODO: always use the same array object for lettercounts5, resetting it after each word6.  Likewise deeper.
     // TODO: reduce indentation
     // TODO: choose the word6 that leaves the best `lettercounts5` (~40% vowels, few 'qzjxkmy)
-    if (typeof num_callbacks === 'undefined') num_callbacks = 30;
+    if (num_callbacks === undefined) num_callbacks = 30;
     const lettercounts6 = count_letters(letters);
     for (let word6 of words_of_len['6']) {
         const lettercounts5 = get_remaining_letters_or_false(Array.from(lettercounts6), word6);
